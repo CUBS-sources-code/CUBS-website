@@ -1,0 +1,18 @@
+.lineOffice {
+    width: 50%;
+    height: 3px;
+    background-color: #97817f;
+    opacity: 50%;
+    margin: auto auto;
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+.lineFAQ {
+    width: 40%;
+    height: 4px;
+    background-color: #A41F13;
+    margin: auto auto;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}

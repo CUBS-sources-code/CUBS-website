@@ -1,0 +1,16 @@
+.banner {
+    display: inline-block;
+    background-color: antiquewhite;
+    /* padding: 5px; */
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.bannerText {
+    position: relative;
+    /* top: 100px; */
+    z-index: 20;
+    text-align: center;
+}
