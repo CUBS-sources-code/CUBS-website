@@ -1,7 +1,9 @@
 export default function CartPage() {
     return (
         <main>
-            <ReservationCart></ReservationCart>
+            <div>
+                HELLO WORLD
+            </div>
         </main>
     )
 }

@@ -14,3 +14,10 @@
     z-index: 20;
     text-align: center;
 }
+
+.logoimg {
+    height: 100%;
+    width: auto;
+    margin-left: 0.25vw;
+    /* margin-top: 0vh; */
+}
