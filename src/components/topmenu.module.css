@@ -1,0 +1,30 @@
+.menucontainer {
+    height: 80px;
+    background-color:#0F082C;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 30;
+    /* border-top: 1px solid lightgrey; */
+    /* border-bottom: 1px solid lightgrey; */
+    display: flex;
+    flex-direction:row;
+}
+
+.logoimg {
+    height: 85%;
+    width: auto;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+.itemcontainer {
+    width: 80px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Brush Script MT', cursive, sans-serif;
+    font-size: 20pt;
+    color: rgb(255, 255, 255);
+}
