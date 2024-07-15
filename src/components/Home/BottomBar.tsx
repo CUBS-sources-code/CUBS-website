@@ -7,10 +7,10 @@ export default function BottomBar() {
             <div className="flex flex-row items-center space-x-6">
                 <span className="text-md font-bold">GET IN TOUCH</span>
                 <a href="https://www.facebook.com/ChulaEngineering" aria-label="Facebook" className="" target="_blank">
-                    <FaFacebook className="text-white text-xl" />
+                    <FaFacebook className="text-white text-xl"/>
                 </a>
                 <a href="https://www.instagram.com/chulaengineeringlibrary" aria-label="Instagram"className="" target="_blank">
-                    <FaInstagram className="text-white text-xl" />
+                    <FaInstagram className="text-white text-xl"/>
                 </a>
             </div>
             <div>
