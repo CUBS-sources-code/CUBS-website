@@ -6,7 +6,7 @@ Chulalongkorn University Blockchain Society
 
 ```bash
 git clone https://github.com/CUBS-sources-code/Frontend.git
-cd /frontend/
+cd ./frontend/
 ```
 
 ```bash

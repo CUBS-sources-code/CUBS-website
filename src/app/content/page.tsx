@@ -1,7 +1,9 @@
 export default function CartPage() {
     return (
         <main>
-            <a></a>
+            <div>
+                HELLO WORLD
+            </div>
         </main>
     )
 }
