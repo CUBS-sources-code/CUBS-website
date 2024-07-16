@@ -6,6 +6,8 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import NextAuthProvider from "@/providers/NextAuthProvider";
 import ReduxProvider from "@/redux/ReduxProvider";
+import InfoBanner from "@/components/Home/InfoBanner";
+import AnimatedFooter from "@/components/Home/AnimatedFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,10 +28,15 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ReduxProvider>
-        <NextAuthProvider session={ nextAuthSession }>
-        <TopMenu />
-        {children}
-        </NextAuthProvider>
+          <NextAuthProvider session={nextAuthSession}>
+            <TopMenu />
+            {children}
+            <InfoBanner />
+            <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-#1F0532 text-white">
+              {/* 1F0532 */}
+              <AnimatedFooter />
+            </div>
+          </NextAuthProvider>
         </ReduxProvider>
       </body>
     </html>

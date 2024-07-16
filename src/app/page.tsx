@@ -10,8 +10,8 @@ export default function Home() {
     <main>
       <Banner />
       <HomeBanner />
-      <InfoBanner/>
-      <BottomBar/>
+      {/* <InfoBanner/> */}
+      {/* <BottomBar/> */}
     </main>
   )
 }
