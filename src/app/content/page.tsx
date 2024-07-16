@@ -1,7 +1,7 @@
 export default function CartPage() {
     return (
         <main>
-            <ReservationCart></ReservationCart>
+            <a></a>
         </main>
     )
 }
