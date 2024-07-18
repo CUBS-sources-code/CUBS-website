@@ -2,7 +2,7 @@ export default function CartPage() {
     return (
         <main>
             <div>
-                HELLO WORLD
+                HELLO WORLD !!
             </div>
         </main>
     )
