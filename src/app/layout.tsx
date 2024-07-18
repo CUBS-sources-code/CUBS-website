@@ -32,7 +32,7 @@ export default async function RootLayout({
             <TopMenu />
             {children}
             <InfoBanner />
-            <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-#1F0532 text-white">
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-black text-black">
               {/* 1F0532 */}
               <AnimatedFooter />
             </div>
