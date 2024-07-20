@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import TopMenu from "@/components/TopMenu";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import NextAuthProvider from "@/providers/NextAuthProvider";
 import ReduxProvider from "@/redux/ReduxProvider";
-import InfoBanner from "@/components/Home/InfoBanner";
-import AnimatedFooter from "@/components/Home/AnimatedFooter";
+import Footer from '@/components/Global/Footer'
+import Header from '@/components/Global/Header'
+import AnimatedFooter from "@/components/Global/AnimatedFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,9 +29,9 @@ export default async function RootLayout({
       <body className={inter.className}>
         <ReduxProvider>
           <NextAuthProvider session={nextAuthSession}>
-            <TopMenu />
+            <Header />
             {children}
-            <InfoBanner />
+            <Footer />
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-black text-black">
               {/* 1F0532 */}
               <AnimatedFooter />

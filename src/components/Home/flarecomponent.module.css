@@ -1,0 +1,27 @@
+.flare {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(90deg, transparent, white, transparent);
+    transform: translate(-50%, -50%);
+    animation: flare 1s infinite;
+  }
+  
+  @keyframes flare {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+  }
+  

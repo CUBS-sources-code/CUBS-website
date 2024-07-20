@@ -1,11 +1,11 @@
-import styles from './topmenu.module.css'
+import styles from './header.module.css'
 import Image from 'next/image';
-import TopMenuItem from './TopMenuItem';
+import TopMenuItem from './HeaderItem';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import { Link } from '@mui/material';
 
-export default async function TopMenu() {
+export default async function Header() {
 
     const session = await getServerSession(authOptions);
 
@@ -18,7 +18,7 @@ export default async function TopMenu() {
                 <TopMenuItem title='Home' pageRef='/' />
                 <TopMenuItem title='Content' pageRef='/content' />
                 <TopMenuItem title='Activity' pageRef='/activity' />
-                <TopMenuItem title='Community' pageRef='/comm' />
+                <TopMenuItem title='Community' pageRef='/community' />
                 {
                     session ? (
                         <Link href="/api/auth/signout">
@@ -35,7 +35,6 @@ export default async function TopMenu() {
                         </Link>
                     )
                 }
-
             </div>
         </div >
     );

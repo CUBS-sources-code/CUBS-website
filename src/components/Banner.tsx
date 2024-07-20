@@ -8,7 +8,9 @@ import { useSession } from 'next-auth/react';
 
 
 export default function Banner() {
+
     const covers = ['/img/HomeCUBS.png', '/img/cover2.jpg', '/img/cover3.jpg', '/img/cover4.jpg']
+
     const [index, setIndex] = useState(0);
     const router = useRouter();
     const { data: session } = useSession()
@@ -42,8 +44,8 @@ export default function Banner() {
                     </div>
                 </div>
 
-                <div className="mt-16 text-center text-lg text-red-400">
-                    <p>Trusted by 100+ ????/ Companies across the globe! </p>
+                <div className="mt-16 text-center text-lg text-white">
+                    <p>Trusted by 100+ Companies across the globe! </p>
                 </div>
             </main>
 

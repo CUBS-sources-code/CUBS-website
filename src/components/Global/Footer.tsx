@@ -1,11 +1,14 @@
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react';
+
 import Link from 'next/link';
 import Image from 'next/image';
+
 import { FaTiktok, FaInstagram, FaFacebook, FaEnvelope } from 'react-icons/fa';
 import { FiGlobe, FiChevronDown } from 'react-icons/fi';
-import styles from './homebanner.module.css'; // Assuming you have a CSS module for styling
+
+import styles from './footer.module.css';
 
 export default function InfoBanner() {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +38,7 @@ export default function InfoBanner() {
                     <div className="flex text-md">
                         <Image
                             src="/img/Logo/CUBSlogo.png"
-                            className={`${styles.logoimg} mx-auto md:mx-0`} // Adjust margins for different screen sizes
+                            className={`${styles.logoimg} mx-auto md:mx-0`}
                             alt="CUBS_LOGO"
                             width={100}
                             height={100}
@@ -138,7 +141,7 @@ export default function InfoBanner() {
                                     </div>
                                 </div>
                             </div>
-                        )}  
+                        )}
                     </div>
 
                 </div>
