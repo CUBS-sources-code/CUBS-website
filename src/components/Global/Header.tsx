@@ -30,7 +30,7 @@ export default async function Header() {
                     ) : (
                         <Link href="/api/auth/signin">
                             <div className='flex items-center h-full px-2 text-white text-lg font-md'>
-                                Sign-In
+                                Join-Us
                             </div>
                         </Link>
                     )

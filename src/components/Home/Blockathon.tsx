@@ -20,16 +20,15 @@ const Blockathon = () => {
                 <p className="mt-6 text-4xl font-bold">
                     Speaker
                 </p>
-                <div className="mt-10 flex justify-between">
-                    <div className="flex-1"></div>
-                    <SpeakerBox speakerName="HELLO" speakerInfo="HELLO HELLO HELLO" />
-                    <div className="flex-1"></div>
-                    <SpeakerBox speakerName="WORLD" speakerInfo="HELLO HELLO HELLO" />
-                    <div className="flex-1"></div>
+                <div className="mt-10 flex justify-between items-center">
+                    <div className="w-1/12" />
+                    <SpeakerBox speakerName="HELLO" speakerInfo="HELLO HELLO HELLO" color="Pink"/>
+                    <SpeakerBox speakerName="WORLD" speakerInfo="HELLO HELLO HELLO" color="Purple"/>
                     <SpeakerBox speakerName="1234" speakerInfo="HELLO HELLO HELLO" />
-                    <div className="flex-1"></div>
+                    <div className="w-1/12" />
                 </div>
-                <div className="mt-10 flex justify-center hover:scale-110">
+
+                <div className="mt-10 flex justify-center hover:scale-105 duration-300">
                     <Link href={`readMore`}>
                         <ReadMore />
                     </Link>

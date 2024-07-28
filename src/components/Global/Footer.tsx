@@ -110,7 +110,7 @@ export default function InfoBanner() {
                         <a href={`https://www.instagram.com/cubs.chula/`} target="_blank" rel="noopener noreferrer" className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out">
                             <FaInstagram className="text-black w-6 h-6" />
                         </a>
-                        <a href={`https://tiktok.com`} target="_blank" rel="noopener noreferrer" className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out">
+                        <a href={`https://www.tiktok.com/@cubs.chula`} target="_blank" rel="noopener noreferrer" className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out">
                             <FaTiktok className="text-black w-6 h-6" />
                         </a>
                         <a href={`https://www.facebook.com/chula.blockchain`} target="_blank" rel="noopener noreferrer" className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out">

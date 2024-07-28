@@ -1,5 +1,5 @@
 .menucontainer {
-    height: 80px;
+    height: 100px;
     background-color:#0F082C;
     position: fixed;
     top: 0px;
@@ -20,7 +20,7 @@
 }
 
 .itemcontainer {
-    width: 80px;
+    width: 100px;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
