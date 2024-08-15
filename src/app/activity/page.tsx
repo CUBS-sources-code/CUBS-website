@@ -7,12 +7,11 @@ import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
 
 import { RxArrowTopRight } from "react-icons/rx";
-
-
+import FlareComponent from "@/components/Home/FlareComponent";
 
 export default function Gallery() {
     return (
-        <div className="min-h-screen bg-black text-white">
+        <div className="min-h-screen bg-[#0F082C] text-white">
             <div className="flex flex-col items-center justify-center py-20">
             <main className="flex flex-col items-center justify-center py-20">
                 <h1 className="text-center text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-900 via-purple-500 to-pink-500">
@@ -40,7 +39,7 @@ export default function Gallery() {
                     <div className="text-center">
                         <h2 className="mt-10 text-4xl text-transparent bg-clip-text 
                         bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500">
-                            Within Our Club!</h2>
+                                Within Our Club!</h2>
                         <p className="mt-4 text-lg max-w-2xl">
                             Discover a world of fascinating activities and thrilling experiences at our club. Whether you are looking to learn something new, meet amazing people, or simply have fun, we have something for everyone. Come and be part of our dynamic community! 
                         </p>
@@ -58,7 +57,8 @@ export default function Gallery() {
                     <div className="text-center">
                         <h2 className="mt-10 text-4xl text-transparent bg-clip-text 
                         bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500">
-                            Feedback From Our Collaborators</h2>
+                                Feedback From Our Collaborators</h2>
+                        <FlareComponent/>
                     </div>
             
                 </div>

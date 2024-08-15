@@ -30,7 +30,9 @@ export default async function RootLayout({
         <ReduxProvider>
           <NextAuthProvider session={nextAuthSession}>
             <Header />
-            {children}
+            <div className="w-full h-[12vh] bg-gradient-to-b from-black via-[#0F082C] to-[#0F082C]">
+              </div>
+              {children}
             <Footer />
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-black text-black">
               <AnimatedFooter />

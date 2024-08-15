@@ -26,7 +26,7 @@ export default function Banner() {
     console.log(session?.user.token);
 
     return (
-        <div className="min-h-screen bg-black text-white">
+        <div className="min-h-screen bg-[#0F082C] text-white">
             <main className="flex flex-col items-center justify-center py-20">
                 <h1 className="text-7xl font-bold text-center text-gradient">
                     CU Blockchain Society
@@ -86,7 +86,6 @@ export default function Banner() {
                 </div>
 
             </main>
-
             <style jsx>{`
                 .text-gradient {
           background: linear-gradient(90deg, rgba(238,0,153,1) 0%, rgba(0,212,255,1) 100%);

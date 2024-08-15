@@ -12,14 +12,15 @@ import styles from './footer.module.css';
 
 export default function InfoBanner() {
     const [isOpen, setIsOpen] = useState(false);
-    const dropdownRef = useRef(null);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setIsOpen(false);
             }
         };
+        
 
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
@@ -32,7 +33,7 @@ export default function InfoBanner() {
     };
 
     return (
-        <div className="bg-gradient-to-b from-black via-black to-black text-white pt-10 pb-[100px] px-7 sm:px-10 flex justify-center items-start">
+        <div className="bg-gradient-to-b from-black via-black to-black text-white pt-20 pb-[100px] px-7 sm:px-10 flex justify-center items-start">
             <div className="grid grid-cols-1 gap-y-10 gap-x-5 md:grid-cols-2 xl:grid-cols-7 mx-auto">
                 <div className="flex flex-col text-left col-span-1 md:items-start">
                     <div className="flex text-md">
@@ -131,11 +132,11 @@ export default function InfoBanner() {
                         {isOpen && (
                             <div className="absolute mt-2 w-40 bg-gray-500 shadow-lg rounded-md border border-gray-200" ref={dropdownRef}>
                                 <div className="py-1">
-                                    <div className={`flex items-center px-4 py-2 cursor-pointer border-b border-gray-400`} onClick={() => alert("English - En")}>
+                                    <div className={`flex items-center px-4 py-2 cursor-pointer border-b border-gray-400`} onClick={() => alert("En\nNot available")}>
                                         <FiGlobe className="mr-2 text-gray-700" />
                                         English - EN
                                     </div>
-                                    <div className={`flex items-center px-4 py-2 cursor-pointer`} onClick={() => alert("Thai - Th")}>
+                                    <div className={`flex items-center px-4 py-2 cursor-pointer`} onClick={() => alert("Th\nNot available")}>
                                         <FiGlobe className="mr-2 text-gray-700" />
                                         Thai - TH
                                     </div>
