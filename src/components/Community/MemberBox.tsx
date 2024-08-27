@@ -50,21 +50,21 @@ const images = [
 
 const Item = ({ src, alt, name }: { src: string; alt: string; name: string }) => {
     return (
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-4">
             <img src={src} alt={alt} className="w-20 h-20 rounded-full" />
-            <p className="font-bold text-lg">{name}</p>
+            <p className="font-bold text-lg whitespace-nowrap">{name}</p>
         </div>
     );
 };
 
 const MemberBox: React.FC = () => {
     return (
-        <div className='bg-[#0F082C]'>
+        <div className='bg-[#0F082C] pb-20'>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-center w-3/4 mx-auto">
                 {images.map((image, index) => (
                     <div
                         key={index}
-                        className="flex items-center gap-4 bg-gray-800 rounded-lg p-4 text-white font-semibold"
+                        className="flex items-center gap-4 bg-gray-800 rounded-lg p-4 text-white font-semibold min-w-[200px] max-w-fit"
                     >
                         <Item src={image.src} alt={image.alt} name={image.name} />
                     </div>
@@ -74,6 +74,4 @@ const MemberBox: React.FC = () => {
     );
 };
 
-
 export default MemberBox;
-

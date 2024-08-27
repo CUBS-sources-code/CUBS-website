@@ -4,7 +4,7 @@ import React from 'react';
 
 const OurMembers: React.FC = () => {
     return (
-        <div className="w-full bg-[#0F082C] from-purple-900 via-purple-800 to-purple-950 py-16 relative overflow-hidden">
+        <div className="w-full bg-gradient-to-b from-black via-[#0F082C] to-[#0F082C] py-16 relative overflow-hidden">
             <style jsx>{`
         .gradientText {
           background: linear-gradient(to right, #311B92, #7102C8, #F8BBD0);
@@ -26,7 +26,7 @@ const OurMembers: React.FC = () => {
                 </div>
             </div>
             <div className='text-white font-sm mt-10'>
-                <h2 className='text-2xl font-sm text-center'>CUBS is a community consisting of more than <span className='text-orange-700'>30</span> members, bringing together individuals</h2>
+                <h2 className='text-2xl font-sm text-center'>CUBS is a community consisting of more than <span className='text-orange-700'>55</span> members, bringing together individuals</h2>
                 <h2 className='text-2xl font-sm text-center mb-20'>who share a keen interest in blockchain technology.!</h2>
             </div>
         </div>

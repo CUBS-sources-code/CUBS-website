@@ -20,7 +20,6 @@ export default function InfoBanner() {
                 setIsOpen(false);
             }
         };
-        
 
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
@@ -64,14 +63,18 @@ export default function InfoBanner() {
                 </div>
 
                 <div className="flex flex-col text-left col-span-1">
-                    <div className="text-2xl font-bold mb-10 text-purple-200">CONTENTS</div>
+                    <Link href={`/content`}>
+                        <div className="text-2xl font-bold mb-10 text-purple-200">CONTENTS</div>
+                    </Link>
                     <Link href={`/blog`}>
                         <div className='mt-2 text-md font-semibold'>Blog and news</div>
                     </Link>
                 </div>
 
                 <div className="flex flex-col text-left col-span-1">
-                    <div className="text-2xl font-bold mb-10 text-purple-200">ACTIVITY</div>
+                    <Link href={`/activity`}>
+                        <div className="text-2xl font-bold mb-10 text-purple-200">ACTIVITY</div>
+                    </Link>
                     <Link href={`/gallery`}>
                         <div className='mt-2 text-md font-semibold'>Photo Gallery</div>
                     </Link>
@@ -84,7 +87,9 @@ export default function InfoBanner() {
                 </div>
 
                 <div className="flex flex-col text-left col-span-1">
-                    <div className="text-2xl font-bold mb-10 text-purple-200">COMMUNITY</div>
+                    <Link href={`/community`}>
+                        <div className="text-2xl font-bold mb-10 text-purple-200">COMMUNITY</div>
+                    </Link>
                     <Link href={`/reviews`}>
                         <div className='mt-2 text-md font-semibold'>Reviews</div>
                     </Link>
@@ -97,7 +102,9 @@ export default function InfoBanner() {
                 </div>
 
                 <div className="flex flex-col col-span-1 text-green">
-                    <div className="text-2xl font-bold mb-10 text-purple-200">JOIN US</div>
+                    <Link href={`/joinus`}>
+                        <div className="text-2xl font-bold mb-10 text-purple-200">JOIN US</div>
+                    </Link>
                     <Link href={`/journey`}>
                         <div className='mt-2 text-md font-semibold'>Journey</div>
                     </Link>
@@ -144,7 +151,6 @@ export default function InfoBanner() {
                             </div>
                         )}
                     </div>
-
                 </div>
             </div>
         </div>

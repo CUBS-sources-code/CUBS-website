@@ -11,7 +11,7 @@ import Expert from './Logo/Expert';
 
 const Benefits = () => {
     return (
-        <div className="w-full bg-black py-16">
+        <div className="w-full bg-gradient-to-b from-[#0F082C] via-black to-black py-16">
             <div className="container mx-auto px-4">
                 <h1 className="text-7xl font-bold text-center text-gradient mt-1">
                     Benefits
