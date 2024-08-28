@@ -28,3 +28,9 @@
     font-size: 20pt;
     color: rgb(255, 255, 255);
 }
+
+.logoWrapper {
+    position: relative;
+    width: 5vw;  /* Adjust width based on viewport */
+    height: 5vw; /* Maintain aspect ratio */
+}

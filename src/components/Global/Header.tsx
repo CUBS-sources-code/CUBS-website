@@ -11,8 +11,15 @@ export default async function Header() {
 
     return (
         <div className={styles.menucontainer}>
-            <Link href="/" underline="none">
-                <Image src={'/img/Logo/CUBSlogo.png'} className={styles.logoimg} alt='logo' width={0} height={0} sizes="20vw"/>
+            <Link className="pt-1 pl-2" href="/" underline="none">
+                <div className={styles.logoWrapper}>
+                    <Image
+                        src='/img/Logo/CUBSlogo.png'
+                        alt='logo'
+                        layout='fill'
+                        objectFit='contain'  // or 'cover', depending on the effect you want
+                    />
+                </div>
             </Link>
             <div className='flex flex-row items-center absolute right-10 h-full absolute right-0 text-white text-sm'>
                 <TopMenuItem title='Home' pageRef='/' />

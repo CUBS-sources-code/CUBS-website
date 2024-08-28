@@ -3,12 +3,21 @@
 import React, { useEffect, useRef } from 'react';
 
 const AnimatedFooter = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current as HTMLCanvasElement;
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    const particles = [];
+    if (!ctx) return;
+
+    const particles: {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      color: string;
+    }[] = [];
     const colors = ['#FF6F91', '#FFC75F', '#D65DB1', '#845EC2', '#0081CF'];
     const maxParticles = 33;
     const radius = 5;
