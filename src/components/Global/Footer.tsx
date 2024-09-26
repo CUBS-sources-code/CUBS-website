@@ -33,7 +33,7 @@ export default function InfoBanner() {
 
     return (
         <div className="bg-gradient-to-b from-black via-black to-black text-white pt-20 pb-[100px] px-7 sm:px-10 flex justify-center items-start">
-            <div className="grid grid-cols-1 gap-y-10 gap-x-5 md:grid-cols-2 xl:grid-cols-7 mx-auto">
+            <div className="grid grid-cols-1 gap-y-10 gap-x-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 mx-auto">
                 <div className="flex flex-col text-left col-span-1 md:items-start">
                     <div className="flex text-md">
                         <Image

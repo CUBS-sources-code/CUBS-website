@@ -12,7 +12,7 @@ const ContentHeader: React.FC = () => {
           -webkit-text-fill-color: transparent;
         }
       `}</style>
-      <div className="container mx-auto text-center relative z-10">
+      <div className="mt-[5vh] container mx-auto text-center relative z-10">
         <h1 className="text-8xl font-bold gradientText opacity-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           CONTENTS
         </h1>

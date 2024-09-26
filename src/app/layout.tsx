@@ -29,10 +29,13 @@ export default async function RootLayout({
       <body className={dmSans.className}>
         <ReduxProvider>
           <NextAuthProvider session={nextAuthSession}>
-            <Header />
-            <div className="w-full h-[12vh] bg-gradient-to-b from-black via-[#0F082C] to-[#0F082C]">
+            <Header session={nextAuthSession} />
+            <div className="relative">
+              <div className="absolute top-0 left-0 w-full h-[8vh] bg-gradient-to-b from-black to-transparent z-30" />
+              <div className="relative z-20">
+                {children}
               </div>
-              {children}
+            </div>
             <Footer />
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-black text-black">
               <AnimatedFooter />
