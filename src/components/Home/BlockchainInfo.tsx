@@ -9,7 +9,7 @@ import Coin from "@/assets/blockchain-info/coin.svg";
 
 const BlockchainInfo = () => {
   return (
-    <div className="space-y-16 pt-16 bg-gradient-to-b from-black via-[#0F082C] to-[#0F082C]">
+    <div className="space-y-32 bg-gradient-to-b from-black via-[#0F082C] to-[#0F082C]">
       <Container className="flex flex-col md:grid grid-cols-2 gap-8">
         <div className="flex flex-col justify-center items-center">
           <div className="relative w-full aspect-video">
