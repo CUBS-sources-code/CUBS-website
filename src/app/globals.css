@@ -9,25 +9,10 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  overflow-x: hidden;
+  @apply bg-background text-white;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-/* Spinning Animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin {
-  animation: spin 20s linear infinite; /* Adjust the duration as needed */
 }
