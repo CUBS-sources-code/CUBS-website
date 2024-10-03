@@ -2,12 +2,46 @@
 
 import Image from "next/image";
 
-import Binance from "./Home/Sponsors/Binance";
-import ICP from "./Home/Sponsors/ICP";
-import VELO from "./Home/Sponsors/VELO";
-import CryptoMind from "./Home/Sponsors/CryptoMind";
+import SCBX from "@/assets/partners/scb-x.png";
+import BitkubExchange from "@/assets/partners/bitkub-exchange.png";
+import ETHPadThai from "@/assets/partners/ethpadthai.png";
+import CryptoMind from "@/assets/partners/cryptomind.png";
+import IC from "@/assets/partners/ic.png";
+import Velo from "@/assets/partners/velo.png";
+import BinanceTH from "@/assets/partners/binance-th.png";
 
 export default function Banner() {
+  const partners = [
+    {
+      name: "SCBx",
+      image: SCBX,
+    },
+    {
+      name: "Bitkub Exchange",
+      image: BitkubExchange,
+    },
+    {
+      name: "ETHPadThai",
+      image: ETHPadThai,
+    },
+    {
+      name: "CryptoMind",
+      image: CryptoMind,
+    },
+    {
+      name: "IC",
+      image: IC,
+    },
+    {
+      name: "Velo",
+      image: Velo,
+    },
+    {
+      name: "Binance TH",
+      image: BinanceTH,
+    },
+  ];
+
   return (
     <div className="min-h-screen text-white">
       <main className="flex flex-col items-center justify-center py-20">
@@ -39,39 +73,24 @@ export default function Banner() {
           </div>
         </div>
 
-        <div className="mt-[50vh] text-center text-lg text-white">
-          <p className="mt-[5vh]">
-            Trusted by 100+ Companies across the globe!{" "}
-          </p>
-        </div>
-        <div className="flex justify-around items-center mt-[5vh]">
-          <Image
-            className="mr-10"
-            src={`/img/Sponsors/SCBx.png`}
-            alt="SCBX"
-            width={150}
-            height={100}
-          />
-          <Image
-            className="mr-10"
-            src={`/img/Sponsors/Bitkub.png`}
-            alt="Bitkub"
-            width={150}
-            height={100}
-          />
-          <Image
-            className="mr-10"
-            src={`/img/Sponsors/ETHPadthai.png`}
-            alt="ETHPadthai"
-            width={100}
-            height={100}
-          />
-          <ICP />
-          <CryptoMind />
-          <VELO />
-        </div>
-        <div className="flex justify-around items-center mt-10">
-          <Binance />
+        <div className="space-y-8 my-16">
+          <div className="mt-[50vh] text-center text-lg text-white">
+            <p className="mt-[5vh]">
+              Trusted by 100+ Companies across the globe!{" "}
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-8 items-center">
+            {partners.map((partner) => (
+              <div key={partner.name} className="relative h-24 aspect-video">
+                <Image
+                  src={partner.image}
+                  alt={partner.name}
+                  fill
+                  className="object-center object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </main>
       <style jsx>{`
