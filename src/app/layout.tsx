@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import { getServerSession } from "next-auth";
 import Footer from "@/components/Global/Footer";
 import Header from "@/components/Global/Header";
 import AnimatedFooter from "@/components/Global/AnimatedFooter";

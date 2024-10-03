@@ -1,7 +1,7 @@
-import Banner from '@/components/Banner';
-import Blockathon from '@/components/Home/Blockathon';
-import BottomBanner from '@/components/Home/BottomBanner';
-import MainBackground from '@/components/Home/Background/MainBackground';
+import Banner from "@/components/Banner";
+import Blockathon from "@/components/Home/Blockathon";
+import BottomBanner from "@/components/Home/BottomBanner";
+import MainBackground from "@/components/Home/Background/MainBackground";
 
 export default function Home() {
   return (
