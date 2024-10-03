@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/CUBS-website",
+  basePath: process.env.BasePath,
   images: {
     unoptimized: true,
   },
