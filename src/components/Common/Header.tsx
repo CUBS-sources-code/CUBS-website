@@ -32,14 +32,13 @@ export default function Header() {
             </div>
           </Link>
         ))}
-      </div>
-
-      <div className="hidden md:block">
-        <Link href="https://www.instagram.com/cubs.chula/" target="_blank">
-          <button className="flex flex-row gap-4 bg-accent-purple text-accent-purple-foreground px-6 py-1 rounded-full font-medium hover:bg-accent-purple/90">
-            <span>Join us</span>
-          </button>
-        </Link>
+        <div className="hidden md:block">
+          <Link href="https://www.instagram.com/cubs.chula/" target="_blank">
+            <button className="flex flex-row gap-4 bg-accent-purple text-accent-purple-foreground px-6 py-1 rounded-full font-medium hover:bg-accent-purple/90">
+              <span>Join us</span>
+            </button>
+          </Link>
+        </div>
       </div>
     </nav>
   );
