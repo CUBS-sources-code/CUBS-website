@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import Logo from "@/assets/CUBSlogo.png";
+
 export default function Header() {
   const menus = [
     { title: "Home", link: "/" },
@@ -10,11 +12,11 @@ export default function Header() {
   ];
 
   return (
-    <div className="sticky top-0 bg-background text-white z-50 flex flex-row justify-between items-center gap-8 px-8 py-2">
+    <nav className="sticky top-0 bg-background text-white z-50 flex flex-row justify-between items-center gap-8 px-8 py-2">
       <Link href="/">
         <div className="relative size-16">
           <Image
-            src="/img/Logo/CUBSlogo.png"
+            src={Logo}
             alt="logo"
             fill
             className="object-contain object-center"
@@ -39,6 +41,6 @@ export default function Header() {
           </button>
         </Link>
       </div>
-    </div>
+    </nav>
   );
 }

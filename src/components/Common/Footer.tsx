@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
+import Logo from "@/assets/CUBSlogo.png";
+
 export default function Footer() {
   const socials = [
     {
@@ -68,7 +70,7 @@ export default function Footer() {
           <div className="flex flex-row items-center">
             <div className="relative size-20">
               <Image
-                src="/img/Logo/CUBSlogo.png"
+                src={Logo}
                 alt="CUBS_LOGO"
                 fill
                 className="object-contain object-center"
