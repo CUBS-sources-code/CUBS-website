@@ -1,199 +1,115 @@
-"use client";
-
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
 import Link from "next/link";
 import Image from "next/image";
+import { Icon } from "@iconify/react";
 
-import { FaTiktok, FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
-import { FiGlobe, FiChevronDown } from "react-icons/fi";
+export default function Footer() {
+  const socials = [
+    {
+      icon: "fa6-brands:facebook",
+      link: "https://www.facebook.com/chula.blockchain",
+    },
+    {
+      icon: "fa6-brands:instagram",
+      link: "https://www.instagram.com/cubs.chula/",
+    },
+    {
+      icon: "fa6-brands:tiktok",
+      link: "https://www.tiktok.com/@cubs.chula",
+    },
+    // {
+    //   icon: "material-symbols:mail",
+    //   link: "mailto:google@google.google",
+    // },
+  ];
 
-import styles from "./footer.module.css";
-
-export default function InfoBanner() {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+  const menus = [
+    {
+      title: "HOME",
+      items: [
+        { title: "CUBS Chula", link: "/" },
+        { title: "Contest", link: "#" },
+      ],
+    },
+    {
+      title: "CONTENTS",
+      items: [{ title: "Blog and News", link: "#" }],
+    },
+    {
+      title: "ACTIVITY",
+      items: [
+        { title: "Photo Gallery", link: "#" },
+        { title: "Our Activities", link: "#" },
+        { title: "Feedback", link: "#" },
+      ],
+    },
+    {
+      title: "COMMUNITY",
+      items: [
+        { title: "Reviews", link: "#" },
+        { title: "Benefits", link: "#" },
+        { title: "Members", link: "#" },
+      ],
+    },
+    {
+      title: "JOIN US",
+      items: [
+        { title: "Journey", link: "#" },
+        { title: "Contact Us", link: "#" },
+      ],
+    },
+  ];
 
   return (
-    <div className="bg-gradient-to-b from-black via-black to-black text-white pt-20 pb-[100px] px-7 sm:px-10 flex justify-center items-start">
-      <div className="grid grid-cols-1 gap-y-10 gap-x-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 mx-auto">
-        <div className="flex flex-col text-left col-span-1 md:items-start">
-          <div className="flex text-md">
-            <Image
-              src="/img/Logo/CUBSlogo.png"
-              className={`${styles.logoimg} mx-auto md:mx-0`}
-              alt="CUBS_LOGO"
-              width={100}
-              height={100}
-              layout="fixed"
-            />
-            <div className="text-3xl font-bold mt-10">CUBS</div>
+    <div className="bg-black text-white px-12 py-8 lg:py-20 lg:px-16">
+      <div className="grid grid-cols-1 gap-y-10 gap-x-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7">
+        <div className="col-span-1 space-y-2">
+          <div className="flex flex-row items-center">
+            <div className="relative size-20">
+              <Image
+                src="/img/Logo/CUBSlogo.png"
+                alt="CUBS_LOGO"
+                fill
+                className="object-contain object-center"
+              />
+            </div>
+            <div className="text-3xl">CUBS</div>
           </div>
-          <div className="mt-2 text-md font-bold">
-            Chulalongkorn University
-            <br />
-            Blockchain Society
-          </div>
-        </div>
-
-        <div className="flex flex-col text-left col-span-1">
-          <div className="text-2xl font-bold mb-10 text-purple-200">HOME</div>
-          <Link href={`/`}>
-            <div className="mt-2 text-md font-semibold">CUBS Chula</div>
-          </Link>
-          <Link href={`/contest`}>
-            <div className="mt-2 text-md font-semibold">Contest</div>
-          </Link>
-        </div>
-
-        <div className="flex flex-col text-left col-span-1">
-          <Link href={`/content`}>
-            <div className="text-2xl font-bold mb-10 text-purple-200">
-              CONTENTS
-            </div>
-          </Link>
-          <Link href={`/blog`}>
-            <div className="mt-2 text-md font-semibold">Blog and news</div>
-          </Link>
-        </div>
-
-        <div className="flex flex-col text-left col-span-1">
-          <Link href={`/activity`}>
-            <div className="text-2xl font-bold mb-10 text-purple-200">
-              ACTIVITY
-            </div>
-          </Link>
-          <Link href={`/gallery`}>
-            <div className="mt-2 text-md font-semibold">Photo Gallery</div>
-          </Link>
-          <Link href={`/activity`}>
-            <div className="mt-2 text-md font-semibold">Our Activities</div>
-          </Link>
-          <Link href={`/feedback`}>
-            <div className="mt-2 text-md font-semibold">Feedback</div>
-          </Link>
-        </div>
-
-        <div className="flex flex-col text-left col-span-1">
-          <Link href={`/community`}>
-            <div className="text-2xl font-bold mb-10 text-purple-200">
-              COMMUNITY
-            </div>
-          </Link>
-          <Link href={`/reviews`}>
-            <div className="mt-2 text-md font-semibold">Reviews</div>
-          </Link>
-          <Link href={`/benefits`}>
-            <div className="mt-2 text-md font-semibold">Benefits</div>
-          </Link>
-          <Link href={`/members`}>
-            <div className="mt-2 text-md font-semibold">Members</div>
-          </Link>
-        </div>
-
-        <div className="flex flex-col col-span-1 text-green">
-          <Link href={`/joinus`}>
-            <div className="text-2xl font-bold mb-10 text-purple-200">
-              JOIN US
-            </div>
-          </Link>
-          <Link href={`/journey`}>
-            <div className="mt-2 text-md font-semibold">Journey</div>
-          </Link>
-          <Link href={`/contact`}>
-            <div className="mt-2 text-md font-semibold">Contact Us</div>
-          </Link>
-        </div>
-
-        <div className="flex flex-col items-center md:items-start col-span-1">
-          <div className="flex items-center justify-center md:justify-start space-x-3 mb-10">
-            <a
-              href={`https://www.instagram.com/cubs.chula/`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out"
-            >
-              <FaInstagram className="text-black w-6 h-6" />
-            </a>
-            <a
-              href={`https://www.tiktok.com/@cubs.chula`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out"
-            >
-              <FaTiktok className="text-black w-6 h-6" />
-            </a>
-            <a
-              href={`https://www.facebook.com/chula.blockchain`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out"
-            >
-              <FaFacebook className="text-black w-6 h-6" />
-            </a>
-            <a
-              href={`mailto:google@google.google`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out"
-            >
-              <FaEnvelope className="text-black w-6 h-6" />
-            </a>
-          </div>
-
           <div>
-            <div
-              className={`flex items-center mt-2 text-sm text-white font-semibold cursor-pointer bg-gray-600 border border-gray-200 rounded-lg px-4 py-2 transition-transform duration-300 ease-in-out hover:scale-105`}
-              onClick={toggleDropdown}
-            >
-              <FiGlobe className="mr-2 text-gray-700" />
-              <div>CHOOSE LANGUAGE</div>
-              <FiChevronDown className="ml-2" />
-            </div>
+            <span className="whitespace-nowrap">Chulalongkorn University</span>{" "}
+            <span className="whitespace-nowrap">Blockchain Society</span>
+          </div>
+        </div>
 
-            {isOpen && (
-              <div
-                className="absolute mt-2 w-40 bg-gray-500 shadow-lg rounded-md border border-gray-200"
-                ref={dropdownRef}
+        {/* Menus */}
+        {menus.map(({ title, items }, index) => (
+          <div key={index} className="flex flex-col text-left col-span-1">
+            <div className="text-2xl font-bold mb-4 text-purple-200">
+              {title}
+            </div>
+            {items.map(({ title, link }, index) => (
+              <Link key={index} href={link}>
+                <div className="mt-2 hover:underline">{title}</div>
+              </Link>
+            ))}
+          </div>
+        ))}
+
+        {/* Socials */}
+        <div className="flex flex-col items-center md:items-start col-span-1">
+          <div className="flex items-center justify-center md:justify-start gap-4">
+            {socials.map(({ icon, link }, index) => (
+              <a
+                key={index}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-500 hover:scale-110 duration-300 ease-in-out"
               >
-                <div className="py-1">
-                  <div
-                    className={`flex items-center px-4 py-2 cursor-pointer border-b border-gray-400`}
-                    onClick={() => alert("En\nNot available")}
-                  >
-                    <FiGlobe className="mr-2 text-gray-700" />
-                    English - EN
-                  </div>
-                  <div
-                    className={`flex items-center px-4 py-2 cursor-pointer`}
-                    onClick={() => alert("Th\nNot available")}
-                  >
-                    <FiGlobe className="mr-2 text-gray-700" />
-                    Thai - TH
-                  </div>
-                </div>
-              </div>
-            )}
+                <Icon icon={icon} className="text-black size-6" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
