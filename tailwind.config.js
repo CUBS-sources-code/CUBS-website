@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       colors: {
         background: "#0F082C",
+        "accent-purple": "#D1C4E9",
+        "accent-purple-foreground": "#651FFF",
       },
     },
   },

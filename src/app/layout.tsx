@@ -26,9 +26,9 @@ export default async function RootLayout({
           <div className="relative z-20">{children}</div>
         </div>
         <Footer />
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-black text-black">
+        {/* <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-black text-black">
           <AnimatedFooter />
-        </div>
+        </div> */}
       </body>
     </html>
   );

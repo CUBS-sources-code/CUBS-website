@@ -25,14 +25,20 @@ export default function Header() {
       <div className="flex flex-row items-center gap-8">
         {menus.map(({ title, link }) => (
           <Link key={title} href={link}>
-            <div className="text-lg font-medium hover:text-gray-400 transition-colors">
+            <div className="text-base lg:text-lg font-medium hover:text-gray-400 transition-colors">
               {title}
             </div>
           </Link>
         ))}
       </div>
 
-      <div></div>
+      <div className="hidden md:block">
+        <Link href="https://www.instagram.com/cubs.chula/" target="_blank">
+          <button className="flex flex-row gap-4 bg-accent-purple text-accent-purple-foreground px-6 py-1 rounded-full font-medium hover:bg-accent-purple/90">
+            <span>Join us</span>
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
