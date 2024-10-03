@@ -1,17 +1,15 @@
-import Banner from "@/components/Banner";
 import Blockathon from "@/components/Home/Blockathon";
-import BottomBanner from "@/components/Home/BottomBanner";
-import MainBackground from "@/components/Home/Background/MainBackground";
+import BlockchainInfo from "@/components/Home/BlockchainInfo";
+import Hero from "@/components/Home/Hero";
+import Partner from "@/components/Home/Partner";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <MainBackground />
-      </div>
-      <Banner />
+    <main className="relative min-h-screen overflow-hidden pb-32">
+      <Hero />
+      <Partner />
       <Blockathon />
-      <BottomBanner />
+      <BlockchainInfo />
     </main>
   );
 }

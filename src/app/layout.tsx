@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Global/Footer";
-import Header from "@/components/Global/Header";
-import AnimatedFooter from "@/components/Global/AnimatedFooter";
+import Footer from "@/components/Common/Footer";
+import Header from "@/components/Common/Header";
+// import AnimatedFooter from "@/components/Common/AnimatedFooter";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -26,9 +26,9 @@ export default async function RootLayout({
           <div className="relative z-20">{children}</div>
         </div>
         <Footer />
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-black text-black">
+        {/* <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-black text-black">
           <AnimatedFooter />
-        </div>
+        </div> */}
       </body>
     </html>
   );
