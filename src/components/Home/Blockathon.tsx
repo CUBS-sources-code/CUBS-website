@@ -22,14 +22,14 @@ const Blockathon = () => {
             The CUBS Blockathon is a hackathon designed to bring together
             participants who will use blockchain technology to address
             real-world problems and create practical solutions. This event
-            focuses on applying blockchain's capabilities to improve everyday
-            life, aiming to turn these ideas into viable business models.
-            Participants are encouraged to think creatively and collaboratively,
-            exploring how blockchain can be integrated into various industries
-            to revolutionize processes, enhance transparency, and build more
-            efficient systems. The goal is to foster innovation and drive the
-            development of blockchain-powered solutions that have a meaningful
-            impact on people's lives.
+            focuses on applying blockchain&#39;s capabilities to improve
+            everyday life, aiming to turn these ideas into viable business
+            models. Participants are encouraged to think creatively and
+            collaboratively, exploring how blockchain can be integrated into
+            various industries to revolutionize processes, enhance transparency,
+            and build more efficient systems. The goal is to foster innovation
+            and drive the development of blockchain-powered solutions that have
+            a meaningful impact on people&#39;s lives.
           </p>
         </div>
 
