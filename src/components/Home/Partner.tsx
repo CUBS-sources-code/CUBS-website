@@ -47,7 +47,7 @@ const Partner = () => {
       <h3 className="text-lg text-center">
         Trusted by 100+ Companies across the globe!
       </h3>
-      <div className="flex flex-wrap gap-12 items-center justify-center">
+      <div className="flex flex-wrap gap-x-12 gap-y-8 items-center justify-center">
         {partners.map((partner) => (
           <div key={partner.name} className="relative h-20 aspect-video">
             <Image
