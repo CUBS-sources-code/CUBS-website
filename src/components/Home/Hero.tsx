@@ -2,6 +2,11 @@ import Container from "../Common/Container";
 import Image from "next/image";
 
 import ToTheMoonLogo from "@/assets/hero/to-the-moon-logo.png";
+import Moon from "@/assets/hero/Moon.png";
+import CloudLeft from "@/assets/hero/CloudLeft.png";
+import CloudRight from "@/assets/hero/CloudRight.png";
+import Star from "@/assets/hero/Star.png";
+import Light from "@/assets/hero/Light.png";
 
 const Hero = () => {
   const stars = [
@@ -23,7 +28,7 @@ const Hero = () => {
         <div className="relative size-48">
           <Image
             className="animate-[spin_20s_linear_infinite] object-contain object-center"
-            src={`/img/Home/Moon.png`}
+            src={Moon}
             alt="Moon"
             fill
           />
@@ -75,7 +80,7 @@ const Hero = () => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
               <Image
                 className="w-[540px]"
-                src={`/img/Home/Light.png`}
+                src={Light}
                 alt="Light"
                 width={300}
                 height={621}
@@ -99,7 +104,7 @@ const Hero = () => {
           className={`absolute ${
             star.rotate ? `rotate-[${star.rotate}deg]` : ""
           }`}
-          src={`/img/Home/Star.png`}
+          src={Star}
           alt="Star"
           width={star.width}
           height={star.height}
@@ -115,7 +120,7 @@ const Hero = () => {
         <div className="absolute top-1/3 transform -translate-y-1/3 left-0">
           <div className="relative h-[450px] w-[600px]">
             <Image
-              src={`/img/Home/CloudLeft.png`}
+              src={CloudLeft}
               alt="Left Cloud"
               fill
               className="object-contain object-left"
@@ -126,7 +131,7 @@ const Hero = () => {
         <div className="absolute top-1/3 transform -translate-y-1/3 right-0">
           <div className="relative h-[450px] w-[600px]">
             <Image
-              src={`/img/Home/CloudRight.png`}
+              src={CloudRight}
               alt="Right Cloud"
               fill
               className="object-contain object-right"
