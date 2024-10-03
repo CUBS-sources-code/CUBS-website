@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const AnimatedFooter = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -8,7 +8,7 @@ const AnimatedFooter = () => {
   useEffect(() => {
     const canvas = canvasRef.current as HTMLCanvasElement;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     const particles: {
@@ -18,7 +18,7 @@ const AnimatedFooter = () => {
       vy: number;
       color: string;
     }[] = [];
-    const colors = ['#FF6F91', '#FFC75F', '#D65DB1', '#845EC2', '#0081CF'];
+    const colors = ["#FF6F91", "#FFC75F", "#D65DB1", "#845EC2", "#0081CF"];
     const maxParticles = 33;
     const radius = 5;
     const lineLength = 150;
@@ -52,7 +52,7 @@ const AnimatedFooter = () => {
     };
 
     const updateParticles = () => {
-      particles.forEach(p => {
+      particles.forEach((p) => {
         p.x += p.vx;
         p.y += p.vy;
 
@@ -82,9 +82,9 @@ const AnimatedFooter = () => {
     resizeCanvas();
     createParticles();
     animate();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
-    return () => window.removeEventListener('resize', resizeCanvas);
+    return () => window.removeEventListener("resize", resizeCanvas);
   }, []);
 
   return <canvas ref={canvasRef} className="absolute inset-50 z-0" />;
