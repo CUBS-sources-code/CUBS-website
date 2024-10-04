@@ -149,20 +149,22 @@ const OurMembers: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-center place-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 place-items-center">
           {members.map((member, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 bg-gray-800 rounded-lg p-4 text-white font-semibold max-w-fit"
+              className="flex items-center gap-4 bg-gray-800 rounded-lg p-4 w-full"
             >
-              <Image
-                src={member.image}
-                alt={member.name}
-                className="w-20 h-20 rounded-full object-cover"
-                width={80}
-                height={80}
-              />
-              <p className="font-bold text-lg whitespace-nowrap">
+              <div className="relative size-16 md:size-20">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="rounded-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <p className="md:text-lg font-semibold whitespace-nowrap">
                 {member.name}
               </p>
             </div>
