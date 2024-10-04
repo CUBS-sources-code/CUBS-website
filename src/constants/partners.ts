@@ -1,6 +1,6 @@
 import SCBX from "@/assets/partners/scb-x.png";
 import BitkubExchange from "@/assets/partners/bitkub-exchange.png";
-import ETHPadThai from "@/assets/partners/ethpadthai.png";
+import ETHPadThai from "@/assets/partners/ethpadthai_logo_1.png";
 import CryptoMind from "@/assets/partners/cryptomind.png";
 import IC from "@/assets/partners/ic.png";
 import Velo from "@/assets/partners/velo.png";
