@@ -27,7 +27,7 @@ const OurMembers: React.FC = () => {
             </div>
             <div className='text-white font-sm mt-10'>
                 <h2 className='text-2xl font-sm text-center'>CUBS is a community consisting of more than <span className='text-orange-700'>55</span> members, bringing together individuals</h2>
-                <h2 className='text-2xl font-sm text-center mb-20'>who share a keen interest in blockchain technology.!</h2>
+                <h2 className='text-2xl font-sm text-center mb-20'>who share a keen interest in blockchain technology.</h2>
             </div>
         </div>
     );
