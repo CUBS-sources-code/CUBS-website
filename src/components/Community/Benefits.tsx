@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import FlareComponent from "../Home/FlareComponent";
 import Connection from "./Logo/Connection";
@@ -8,21 +6,24 @@ import Internship from "./Logo/Internship";
 import Experience from "./Logo/Experience";
 import Idea from "./Logo/Idea";
 import Expert from "./Logo/Expert";
+import Container from "../Common/Container";
 
 const Benefits = () => {
   return (
-    <div className="w-full bg-gradient-to-b from-[#0F082C] via-black to-black py-16">
-      <div className="container mx-auto px-4">
-        <h1 className="text-7xl font-bold text-center text-gradient mt-1">
-          Benefits
-        </h1>
+    <div className="bg-gradient-to-b from-[#0F082C] via-black to-black py-16">
+      <Container>
+        <div className="flex flex-col justify-center items-center">
+          <h2 className="text-7xl font-bold text-center bg-gradient-to-r from-[#EE0099] to-[#00D4FF] bg-clip-text text-transparent">
+            Benefits
+          </h2>
+        </div>
         <div className="flex justify-center items-center mb-10">
           <FlareComponent />
         </div>
-        <h2 className="text-lg font-md text-center mb-10">
+        <p className="text-lg font-md text-center mb-10">
           When you join our club, you&#39;ll gain unique experiences, build
           valuable connections, and much more.
-        </h2>
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="flex flex-col items-center">
             <Connection />
@@ -81,20 +82,7 @@ const Benefits = () => {
             </p>
           </div>
         </div>
-      </div>
-      <style jsx>{`
-        .text-gradient {
-          background: linear-gradient(
-            90deg,
-            rgba(238, 0, 153, 1) 0%,
-            rgba(0, 212, 255, 1) 100%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
-        }
-      `}</style>
+      </Container>
     </div>
   );
 };
