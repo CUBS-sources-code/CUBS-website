@@ -8,7 +8,7 @@ export default function CommunityPage() {
     return (
         <div>
             <CommunityHeader />
-            <ReviewFromUs />
+            {/* <ReviewFromUs /> */}
             <Benefits />
             <OurMembers />
             <MemberBox/>

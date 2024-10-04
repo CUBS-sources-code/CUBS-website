@@ -6,13 +6,6 @@ import FlareComponent from "../Home/FlareComponent";
 const ReviewFromUs = () => {
   return (
     <div className="bg-[#0F082C] text-white p-10">
-      <h2 className="text-2xl font-sm text-center">
-        Explore new interests, make friends, and enjoy exciting activities.
-      </h2>
-      <h2 className="text-2xl font-sm text-center mb-20">
-        There &#39;s always something happening at our club. Be part of the
-        blockchain adventure!
-      </h2>
       <h1 className="text-6xl font-bold text-center text-gradient">
         Review From Us
       </h1>

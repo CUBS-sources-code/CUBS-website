@@ -25,6 +25,15 @@ const CommunityHeader: React.FC = () => {
           <div className="w-2 h-2 bg-white rounded-full"></div>
         </div>
       </div>
+      <div className='mt-[10vh]'>
+        <h2 className="text-2xl font-sm text-center">
+          Explore new interests, make friends, and enjoy exciting activities.
+        </h2>
+        <h2 className="text-2xl font-sm text-center mb-2">
+          There&#39;s always something happening at our club. Be part of the
+          blockchain adventure!
+        </h2>
+      </div>
     </div>
   );
 };
