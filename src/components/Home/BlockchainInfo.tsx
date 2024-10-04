@@ -33,11 +33,11 @@ const BlockchainInfo = () => {
             that securely records transactions across many computers in a way
             that ensures the data cannot be altered.
           </p>
-          <div className="mt-5 flex justify-center hover:scale-105 duration-300">
+          {/* <div className="mt-5 flex justify-center hover:scale-105 duration-300">
             <Link href={`learnmore`}>
               <LearnMore />
             </Link>
-          </div>
+          </div> */}
         </div>
       </Container>
 
@@ -54,11 +54,11 @@ const BlockchainInfo = () => {
             <span className="text-pink-500">decentralized</span> networks based
             on <span className="text-pink-500">blockchain technology.</span>
           </p>
-          <div className="mt-5 flex justify-center hover:scale-105 duration-300">
+          {/* <div className="mt-5 flex justify-center hover:scale-105 duration-300">
             <Link href={`learnmore`}>
               <LearnMore />
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col justify-center items-center">
           <div className="relative w-full aspect-video">
