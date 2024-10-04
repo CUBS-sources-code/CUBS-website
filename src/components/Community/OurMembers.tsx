@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "../Common/Container";
 
-import Image from "next/image";
 import { members } from "@/constants/members";
+import Image from "next/image";
 
 const OurMembers: React.FC = () => {
   return (
@@ -37,13 +37,14 @@ const OurMembers: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 place-items-center">
+        {/* member chips */}
+        <div className="flex flex-wrap gap-4 justify-center">
           {members.map((member, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 bg-gray-800 rounded-lg p-4 w-full"
+              className="inline-flex items-center gap-4 bg-gray-800 rounded-full p-3 pr-5"
             >
-              <div className="relative size-16 md:size-20">
+              <div className="relative size-8 md:size-12">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -52,7 +53,7 @@ const OurMembers: React.FC = () => {
                   loading="lazy"
                 />
               </div>
-              <p className="md:text-lg font-semibold whitespace-nowrap">
+              <p className="text-base md:text-lg font-semibold whitespace-nowrap">
                 {member.name}
               </p>
             </div>
