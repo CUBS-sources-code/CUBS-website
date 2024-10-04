@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Link from "next/link";
-import LearnMore from "./LearnMore";
+// import Link from "next/link";
+// import LearnMore from "./LearnMore";
 import Container from "../Common/Container";
 
 import Blockchain from "@/assets/blockchain-info/blockchain.svg";
