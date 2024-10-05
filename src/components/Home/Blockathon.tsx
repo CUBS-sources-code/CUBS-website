@@ -1,8 +1,5 @@
-import SpeakerBox from "./SpeakerBox";
 import FlareComponent from "./FlareComponent";
-import ReadMore from "./ReadMore";
 
-import Link from "next/link";
 import Container from "../Common/Container";
 
 const Blockathon = () => {
@@ -33,7 +30,7 @@ const Blockathon = () => {
           </p>
         </div>
 
-        <div className="space-y-8">
+        {/* <div className="space-y-8">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-[#EE0099] to-[#00D4FF] bg-clip-text text-transparent">
               Speaker
@@ -62,7 +59,7 @@ const Blockathon = () => {
               <ReadMore />
             </Link>
           </div>
-        </div>
+        </div> */}
       </Container>
     </div>
   );
