@@ -62,7 +62,7 @@ const members = [
   { name: "Amy", image: Amy },
   { name: "Neiy", image: Neiy },
   { name: "Yeekheng", image: Yeekheng },
-  { name: "Sku", image: Sky },
+  { name: "Sky", image: Sky },
   { name: "Big", image: Big },
   { name: "Noon", image: Noon },
   { name: "Thi", image: Thi },
