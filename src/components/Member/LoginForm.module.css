@@ -1,0 +1,151 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0F082C;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 30px;
+    width: 450px;
+    border-radius: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.label {
+    color: #151717;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputForm {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #ecedec;
+    border-radius: 10px;
+    height: 50px;
+    padding-left: 15px;
+    transition: border 0.2s ease-in-out;
+}
+
+.input {
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    height: 100%;
+    font-size: 16px;
+    outline: none;
+    color: black;
+    /* Set input text color to black */
+}
+
+.inputForm:focus-within {
+    border: 1.5px solid #2d79f3;
+}
+
+.flexRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio {
+    margin-right: 5px;
+}
+
+.span {
+    font-size: 14px;
+    color: #2d79f3;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.buttonSubmit {
+    margin: 20px 0 10px 0;
+    background-color: #151717;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+    /* Change color on hover */
+
+.buttonSubmit:hover {
+    background-color: #2d79f3;
+    /* Change color on hover */
+}
+
+.p {
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.pLine {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    gap: 10px;
+    border: 1px solid #ededef;
+    background-color: white;
+    cursor: pointer;
+    transition: border 0.2s ease-in-out;
+}
+
+.btn:hover {
+    border: 1px solid #2d79f3;
+    /* Change border color on hover */
+}
+
+.btnGoogle {
+    background-color: #FBBB00;
+    /* Google button color */
+    color: black;
+    /* Google button text color */
+}
+
+.btnApple {
+    background-color: #000000;
+    /* Apple button color */
+    color: white;
+    /* Apple button text color */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 500px) {
+    .form {
+        width: 90%;
+        /* Make form responsive on smaller screens */
+        padding: 20px;
+    }
+}

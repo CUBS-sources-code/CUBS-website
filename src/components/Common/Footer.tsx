@@ -59,6 +59,7 @@ export default function Footer() {
       items: [
         { title: "Journey", link: "#" },
         { title: "Contact Us", link: "#" },
+        { title: "Club Members", link: "/member" },
       ],
     },
   ];
