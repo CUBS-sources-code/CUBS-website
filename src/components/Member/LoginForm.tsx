@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 import styles from './LoginForm.module.css';
 import { Google as GoogleIcon, Apple as AppleIcon } from '@mui/icons-material';
 
@@ -10,14 +10,15 @@ const LoginForm = () => {
         password: ''
     });
 
-    const handleChange = (e: { target: { name: any; value: any; }; }) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
     };
 
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log('Form Data:', formData);
     };
@@ -74,7 +75,7 @@ const LoginForm = () => {
 
                 <button type="submit" className={styles.buttonSubmit}>Sign In</button>
 
-                <p className={styles.p}>Don't have an account? <span className={styles.span}>Sign Up</span></p>
+                <p className={styles.p}>Don&apos;t have an account? <span className={styles.span}>Sign Up</span></p>
                 <p className={styles.pLine}>Or With</p>
                 <div>
                     <button className={`${styles.btn} ${styles.btnGoogle}`}>
