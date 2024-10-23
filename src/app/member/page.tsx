@@ -1,9 +1,11 @@
-import LoginForm from "@/components/Member/LoginForm";
+import MemberInfo from "@/components/Member/MemberInfo";
+import TransactionPanel from "@/components/Member/TransactionPanel";
 
 export default function Member() {
     return (
         <div>
-            <LoginForm />
+            <MemberInfo />
+            <TransactionPanel/>
         </div>
     )
 }
