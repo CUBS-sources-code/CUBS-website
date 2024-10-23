@@ -3,8 +3,16 @@
 import React, { useEffect, useState } from 'react';
 import getMyInfo from '@/lib/getMyinfo';
 
-const MemberInfo = () => {
-    const [userInfo, setUserInfo] = useState<any>(null);
+interface UserInfo {
+    id: string;
+    name: string;
+    student_id: string;
+    balance: number;
+    created_at: string;
+}
+
+const MemberInfo: React.FC = () => {
+    const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
 
     useEffect(() => {
         const fetchInfo = async () => {
