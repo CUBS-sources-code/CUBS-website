@@ -31,7 +31,7 @@ const MemberInfo: React.FC = () => {
         <div
             style={{
                 width: '100vw',
-                height: '60vh',
+                height: '65vh',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

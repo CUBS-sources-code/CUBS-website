@@ -13,7 +13,7 @@ const LoginForm = () => {
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (token) {
-            setIsLoggedIn(true)
+            // setIsLoggedIn(true)
             window.location.href = '/member';
         }
     }, []);
