@@ -1,7 +1,10 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import getMyInfo from '@/lib/getMyinfo';
+import dayjs from 'dayjs'; // Import dayjs
+import utcPlugin from 'dayjs/plugin/utc'; // Import the utc plugin
+dayjs.extend(utcPlugin); // Extend dayjs with the utc plugin
 
 interface UserInfo {
     id: string;
@@ -16,16 +19,51 @@ const MemberInfo: React.FC = () => {
 
     useEffect(() => {
         const fetchInfo = async () => {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                console.error('No token found');
+                return;
+            }
+
             try {
-                const data = await getMyInfo(localStorage.getItem('token')!);
+                const data = await getMyInfo(token);
                 setUserInfo(data);
             } catch (error) {
-                console.error('Error fetching transactions:', error);
+                console.error('Error fetching user info:', error);
             }
         };
 
         fetchInfo();
     }, []);
+
+    const formatCreatedAt = (dateString: string | null) => {
+        if (!dateString) return 'Invalid Date';
+
+        // console.log("Original Date String: ", String(dateString));
+
+        // // Parse the date string with Date
+        // const date = new Date(dateString.replace(/( +UTC|[+-]\d{2}:\d{2})/, 'Z'));
+
+        // // Check if the date is valid
+        // if (isNaN(date.getTime())) {
+        //     return 'Invalid Date';
+        // }
+
+        // // Define options for formatting
+        // const options: Intl.DateTimeFormatOptions = {
+        //     year: 'numeric',
+        //     month: 'long',
+        //     day: 'numeric',
+        //     hour: 'numeric',
+        //     minute: 'numeric',
+        //     hour12: true,
+        // };
+
+        // Format the date using toLocaleString
+        // return `Created At: ${date.toLocaleString('en-GB', options)}`;
+        return String(dateString);
+    };
+
 
     return (
         <div
@@ -52,33 +90,37 @@ const MemberInfo: React.FC = () => {
                 }}
                 className="card2"
             >
-                <div style={{
-                    width: '100%',
-                    height: '100%',
-                    borderRadius: '20px',
-                    backgroundColor: 'white',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    zIndex: 1,
-                }} />
+                <div
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        borderRadius: '20px',
+                        backgroundColor: 'white',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        zIndex: 1,
+                    }}
+                />
 
-                <div style={{
-                    position: 'relative',
-                    zIndex: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '100%',
-                    color: 'black',
-                }}>
+                <div
+                    style={{
+                        position: 'relative',
+                        zIndex: 2,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: '100%',
+                        color: 'black',
+                    }}
+                >
                     {userInfo ? (
                         <>
                             <h2>Name: {userInfo.name}</h2>
                             <p>Student ID: {userInfo.student_id}</p>
-                            <p>Balance: ${userInfo.balance}</p>
-                            <p>Created At: {new Date(userInfo.created_at).toLocaleString()}</p>
+                            <p>Balance: ${userInfo.balance.toFixed(2)}</p>
+                            <p>Created At: {formatCreatedAt(userInfo.created_at)}</p>
                         </>
                     ) : (
                         <p>Loading...</p>

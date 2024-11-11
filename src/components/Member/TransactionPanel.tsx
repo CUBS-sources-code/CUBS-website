@@ -19,7 +19,7 @@ const TransactionPanel: React.FC = () => {
         const fetchTransactions = async () => {
             try {
                 const response = await getAllTransactions();
-                console.log('Fetched data:', response); // Log the raw response
+                // console.log('Fetched data:', response); // Log the raw response
                 const { transactions } = response; // Extract the transactions array
                 setTransactions(transactions); // Set the transactions array in state
                 setLoading(false);
@@ -34,9 +34,9 @@ const TransactionPanel: React.FC = () => {
         fetchTransactions();
     }, []);
 
-    useEffect(() => {
-        console.log('Rendering with transactions:', transactions);
-    }, [transactions]);
+    // useEffect(() => {
+    //     console.log('Rendering with transactions:', transactions);
+    // }, [transactions]);
 
     return (
         <div className="flex items-center justify-center h-[50vh]">

@@ -16,6 +16,7 @@
     "@mui/icons-material": "^6.1.4",
     "@mui/material": "^6.1.4",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
     "ethers": "^6.13.2",
     "mdb-react-ui-kit": "^9.0.0",
     "next": "^14.2.14",
