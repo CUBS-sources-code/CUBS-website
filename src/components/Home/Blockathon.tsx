@@ -1,6 +1,7 @@
 import FlareComponent from "./FlareComponent";
 
 import Container from "../Common/Container";
+import BlockathonShuffleCard from "./BlockathonShuffleCard";
 
 const Blockathon = () => {
   return (
@@ -29,6 +30,8 @@ const Blockathon = () => {
             a meaningful impact on people&#39;s lives.
           </p>
         </div>
+
+        <BlockathonShuffleCard />
 
         {/* <div className="space-y-8">
           <div className="flex flex-col justify-center items-center">
