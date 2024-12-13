@@ -11,17 +11,17 @@ const HorizontalGallery = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % (images.length + 0));
-        }, 1000);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, [images.length]);
 
     return (
-        <div className="flex justify-center items-center w-full h-[420px] p-4 overflow-hidden relative">
+        <div className="flex justify-start items-center w-full h-[420px] p-4 overflow-hidden relative">
             <div
                 className="flex transition-transform duration-500"
                 style={{
-                    transform: `translateX(-${currentIndex * 440}px)`,
+                    transform: `translateX(-${currentIndex * 432}px)`,
                     position: "relative",
                 }}
             >
@@ -30,9 +30,10 @@ const HorizontalGallery = () => {
                     return (
                         <div
                             key={index}
-                            className={`w-[400px] h-[400px] mx-4 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-110 hover:shadow-2xl`}
+                            className={`w-[400px] h-[400px] mx-4 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-110`}
                             style={{
                                 transform: `rotate(${rotation}deg)`,
+                                transition: 'transform 0.3s ease-in-out',
                             }}
                         >
                             <Image
