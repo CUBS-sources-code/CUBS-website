@@ -10,8 +10,8 @@ const HorizontalGallery = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 2000);
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % (images.length + 0));
+        }, 1000);
 
         return () => clearInterval(interval);
     }, [images.length]);
@@ -22,10 +22,11 @@ const HorizontalGallery = () => {
                 className="flex transition-transform duration-500"
                 style={{
                     transform: `translateX(-${currentIndex * 440}px)`,
+                    position: "relative",
                 }}
             >
                 {images.map((img, index) => {
-                    const rotation = Math.floor(Math.random() * 16) - 8;
+                    const rotation = Math.floor(Math.random() * 10) - 5;
                     return (
                         <div
                             key={index}
@@ -40,6 +41,9 @@ const HorizontalGallery = () => {
                                 style={{
                                     objectPosition: "center",
                                     borderRadius: "8px",
+                                    objectFit: "cover",
+                                    // height: "auto",
+                                    // width: "auto",
                                 }}
                                 width={400}
                                 height={400}

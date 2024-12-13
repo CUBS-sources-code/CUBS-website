@@ -6,7 +6,7 @@ const Partner = () => {
   return (
     <Container className="space-y-12">
       <h3 className="text-lg text-center">
-        Partnered with 100+ companies globally for various events.
+        Partnered with 10+ companies globally for various events.
       </h3>
       <div className="flex flex-wrap gap-x-12 gap-y-8 items-center justify-center">
         {partners.map(({ name, image }) => (
