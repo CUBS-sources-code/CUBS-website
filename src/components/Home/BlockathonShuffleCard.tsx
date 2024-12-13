@@ -6,12 +6,6 @@ import { Blockathon } from "@/constants/blockathon";
 const HorizontalGallery = () => {
     const images = Blockathon;
 
-    const generateRandomRotations = () => {
-        return images.map(() => Math.floor(Math.random() * 16) - 8);
-    };
-
-    const [imageRotations, setImageRotations] = useState(generateRandomRotations());
-
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -20,7 +14,7 @@ const HorizontalGallery = () => {
         }, 2000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [images.length]);
 
     return (
         <div className="flex justify-center items-center w-full h-[420px] p-4 overflow-hidden relative">
@@ -31,12 +25,13 @@ const HorizontalGallery = () => {
                 }}
             >
                 {images.map((img, index) => {
+                    const rotation = Math.floor(Math.random() * 16) - 8;
                     return (
                         <div
                             key={index}
                             className={`w-[400px] h-[400px] mx-4 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-110 hover:shadow-2xl`}
                             style={{
-                                transform: `rotate(${imageRotations[index]}deg)`,
+                                transform: `rotate(${rotation}deg)`,
                             }}
                         >
                             <Image
